@@ -1,0 +1,275 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+  {{ parent() }}
+  <style type=text/css>
+
+    #home{
+      padding-top: 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .section-video{
+      height: 1200px;
+    }
+    .video-overlay {
+      background: url(/img/dot.png) rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 34;
+      opacity: 0.7;
+    }
+    .video-overlay-text {
+      width: 100%;
+      color: white;
+      position: absolute;
+      top: 35%;
+      left: 0;
+      z-index: 36;
+    }
+    .fersz-thumb{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .fersz-thumb img{  
+      margin-bottom: 15px; 
+      width: 200px; 
+      height: 200px;
+    }
+    .fersz-shadow {
+      display: inline-block;
+      position: relative;
+      -webkit-transition-duration: .3s;
+      transition-duration: .3s;
+      -webkit-transition-property: -webkit-transform;
+      transition-property: transform;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      box-shadow: 0 0 1px transparent;
+      margin: 0 0 25px;
+    }
+    .fersz-shadow:active, .fersz-shadow:focus, .fersz-shadow:hover {
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+    .fersz-shadow:before {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      content: '';
+      top: 100%;
+      left: 5%;
+      height: 10px;
+      width: 90%;
+      opacity: 0;
+      background: -webkit-radial-gradient(center,ellipse,rgba(0,0,0,.35) 0,transparent 80%);
+      background: radial-gradient(ellipse at center,rgba(0,0,0,.35) 0,transparent 80%);
+      -webkit-transition-duration: .3s;
+      transition-duration: .3s;
+      -webkit-transition-property: -webkit-transform,opacity;
+      transition-property: transform,opacity;
+    }
+    .fersz-shadow:active:before, .fersz-shadow:focus:before, .fersz-shadow:hover:before {
+      opacity: 1;
+      -webkit-transform: translateY(5px);
+      transform: translateY(5px);
+    }
+    #team > .container{
+      margin-top: 45px;
+    }
+    #services{
+      padding-bottom: 0;
+    }
+    .contact-table td{
+      padding: 10px 12px;
+    }
+  </style>
+{% endblock stylesheets %}
+{% block body %}
+  {{ include('FrontendBundle:Default:header.html.twig') }}
+  <section id="home" >
+    <video class="section-video" poster="/img/logo.png" autoplay="" loop="" preload="none" src="/video/video.mp4" >
+      <!-- MP4 source must come first for iOS -->
+      <source type="video/mp4" src="/video/video.mp4">
+      <!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+      <div class="fluid-width-video-wrapper">
+        <object type="application/x-shockwave-flash" data="images/video/flashmediaelement.swf" id="fitvid982727"> 		
+          <param name="movie" value="images/video/flashmediaelement.swf"> 
+          <param name="flashvars" value="controls=false&amp;file=/video/video.mp4"> 		
+          <!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+          <img src="/img/logo.png" alt="No Video Image" title="No video playback capabilities">
+        </object>
+      </div> 	
+    </video>
+    <div class="video-overlay"></div> 
+    <div class="video-overlay-text text-center">
+      <div class="text-center">
+        <div class="h1 fersz-h1-pacifico fersz-title fersz-font-shadow">Nuestro lema es <span class=" fersz-font-color-primary"> Innovación</span></div>
+        <div class="h2  fersz-subtitle fersz-font-shadow">Nuestro objetivo es cambiar el mundo y crecer con nuestros clientes</div>
+      </div>
+    </div> 
+  </section>
+  <section id="services">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="fersz-h1-pacifico fersz-title fersz-font-color-primary fersz-font-shadow">Servicios</h1>
+        <p class="fersz-subtitle">Soluciones Profesionales</p>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-3">
+          <h2 class="text-center">
+            <a href="#no-page"  class="fersz-h1-pacifico fersz-subtitle fersz-font-color-primary fersz-font-shadow">Educación Empresarial</a>
+          </h2>
+          <p class="text-justify">
+            Capasitamos a las empresas en el ambito financiero, para maximisar sus procesos y minimisar perdidas futuras
+          </p>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h2 class="text-center">
+            <a href="#no-page" class="fersz-h1-pacifico fersz-subtitle fersz-font-color-primary fersz-font-shadow">Branding General</a>
+          </h2>
+          <p class="text-justify">
+            Entrenamiento de como impulsar los productos de las empresas o cualquier objeto, imagen o persona que se quiera lanzar al mercado
+          </p>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h2 class="text-center">
+            <a href="#no-page"  class="fersz-h1-pacifico fersz-subtitle fersz-font-color-primary fersz-font-shadow">Estudio de Mercado</a>
+          </h2>
+          <p class="text-justify">
+            Tenemos la capasidad de hacer analisis de mercado, gracias a nuestra red de jovenes distribuidos a nivel nacional. Procesamos la informacion y la presntamos varios tipos de formatos
+          </p>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h2 class="text-center">
+            <a href="#no-page"  class="fersz-h1-pacifico fersz-subtitle fersz-font-color-primary fersz-font-shadow">Web Services y desarrollos</a>
+          </h2>
+          <p class="text-justify">
+            Necesitas de un sistema, para agilizar procesos ? contactanos para realizar sistemas automatizados, con las mejores tecnologias del mercado
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-responsive" src="/img/hero.png" alt=""/>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="team" class="fersz-bg-gray">
+    <div class="text-center">
+      <h1 class="fersz-h1-pacifico fersz-title fersz-font-color-primary fersz-font-shadow">El Equipo</h1>
+      <p class="fersz-subtitle">Somos asombrosos</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class=" col-md-4 col-sm-6">
+          <div class="fersz-thumb text-center">
+            <div class="fersz-shadow">
+              <img class="img-thumbnail img-circle" src="/img/luis.jpg">
+            </div>
+            <div class="fersz-subtitle-2">
+              <div class="fersz-subtitle fersz-font-bold">Luis Carlos Ferrer</div>
+              Founder / CEO
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-4 col-sm-6">
+          <div class="fersz-thumb text-center">
+            <div class="fersz-shadow">
+              <img class="img-thumbnail img-circle" src="/img/rene.jpg">
+            </div>
+            <div class="fersz-subtitle-2">
+              <div class="fersz-subtitle fersz-font-bold">Rene Ramirez</div>
+              Co-Founder / CTO
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-4 col-sm-6">
+          <div class="fersz-thumb text-center">
+            <div class="fersz-shadow">
+              <img class="img-thumbnail img-circle" src="/img/laura.jpg">
+            </div>
+            <div class="fersz-subtitle-2">
+              <div class="fersz-subtitle fersz-font-bold">Laura Salom</div>
+              Comunications Office
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <section id="portfolio">
+    <div class="text-center">
+      <h1 class="fersz-h1-pacifico fersz-title fersz-font-color-primary fersz-font-shadow">Portafolio</h1>
+      <p class="fersz-subtitle">Se hace mas grande cada dia</p>
+    </div>
+
+  </section>
+
+  <section id="contactus">
+    <div class="text-center">
+      <h1 class="fersz-h1-pacifico fersz-title fersz-font-color-primary fersz-font-shadow">Contactanos</h1>
+      <p class="fersz-subtitle">¿Tienes preguntas o comentarios?</p>
+      <p class="fersz-subtitle">ponte en contacto con nosotros!</p>
+      <table class="contact-table h3 text-left table-hover" style="display: inline-block" >
+        <tbody>
+          <tr>
+            <td><i class="fa fa-phone"></i></td>
+            <td>+58</td>
+            <td>212 257 2575</td>
+            <td>Venezuela</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-phone"></i></td>
+            <td>+57</td>
+            <td>212 257 2575</td>
+            <td>Colombia</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-phone"></i></td>
+            <td>+1</td>
+            <td>647 772 1613</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-envelope"></i></td>
+            <td colspan="3" class="text-center"><a href="mailto:info@fersz.com">info@fersz.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endblock body %}
+{% block javascripts %}
+  {{ parent() }}
+  <script src="/libs/jquery-localScroll/jquery.localScroll.min.js" type="text/javascript"></script>
+  <script src="/libs/jquery-scrollTo/jquery.scrollTo.min.js" type="text/javascript"></script>
+  <script src="/libs/jquery-parallax/jquery-parallax.js" type="text/javascript"></script>
+  <script src="/libs/waypoints/waypoints.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+      $('body > header').localScroll({offset: -110});
+      $("video").prop('muted', true); //mute
+      $('section').waypoint(function (direction) {
+        if (direction === "down") {
+          $('#fersz-menu a').removeClass('active');
+          $('#fersz-menu li:nth-child(' + ($(this).index() * 1 - 1) + ') a').addClass('active');
+        } else {
+          $('#fersz-menu li:nth-child(' + ($(this).index() * 1 - 2) + ') a').addClass('active');
+          $('#fersz-menu li:nth-child(' + ($(this).index() * 1 - 1) + ') a').removeClass('active');
+        }
+      }, {offset: 111});
+    });
+
+
+  </script>
+{% endblock javascripts %}

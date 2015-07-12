@@ -1,0 +1,101 @@
+/* 
+    Created on : 26-Jun-2015, 11:20:10 PM
+    Author     : Rene Roberto Ramirez Szabo <rene.szabo@gmail.com>
+*/
+
+$fersz-color-primary: #99cc33;    //Green
+$fersz-color-secondary: #676268;  //GRAY
+$fersz-color-tertiary: #ffcc00;    //Yellow
+
+
+
+html,body{
+  height: 100%;
+  font-family: 'Exo+2', sans-serif;
+  font-weight: normal; 
+}
+a{
+  color: $fersz-color-primary;
+  
+}
+a:hover, a:focus{
+  color: darken($fersz-color-primary,10);
+  text-decoration: none;
+}
+
+body > header {
+  .fersz-navbar-default{
+    background: rgba(0,0,0,0.6);
+    border:none;
+  }
+  .navbar-header{
+    .navbar-toggle {
+      margin-top: 45px; //TO 10
+      border: none;
+    }
+    .navbar-brand {
+      height: 110px; // 80
+      padding-top: 6px;
+      padding-bottom: 6px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  #fersz-menu{
+
+    margin-top: 30px;
+    font-weight: 600;
+    a {
+      color: white;
+      margin-left: 10px;
+      border: 1px transparent solid;
+      border-radius: 5px;
+      &:hover{
+        border: 1px white solid;
+      }
+      &.active{
+        color: $fersz-color-primary;
+        border: 1px $fersz-color-primary solid;
+      }
+    }
+  }
+}
+/*TEXT STUFF*/
+.fersz-h1-pacifico{
+  font-family: 'Pacifico', sans-serif;
+}
+.fersz-title{
+  font-size: 75px;
+  line-height: 75px;
+}
+.fersz-subtitle{
+  font-size: 32px;
+  line-height: 32px;
+  font-family: 'Audiowide', sans-serif;
+}
+.fersz-subtitle-2{
+  font-size: 23px;
+  line-height: 23px;
+}
+
+.fersz-font-bold{
+  font-weight: 600;
+}
+
+.fersz-font-color-primary{
+  color: $fersz-color-primary;
+}
+.fersz-font-shadow{
+  -webkit-text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/*SECTION STUFF*/
+section{
+  min-height: 10px;
+  padding: 40px 0;
+}
+.fersz-bg-gray{
+  background: lighten($fersz-color-secondary,40);
+}

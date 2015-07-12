@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+<html lang="en">
+  <head>
+    {{ include('meta.html.twig') }}
+    <title>{% block title %}{% endblock %}Fersz</title>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico|Raleway:600,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Audiowide&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Exo+2:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+    {% block stylesheets %}
+      {{ include('css.html.twig') }}
+    {% endblock %} 
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  {% block body %}{% endblock %}
+  {% block javascripts %}
+    {{ include('javascripts.html.twig') }}
+    {{ include('analytics.html.twig') }}
+  {% endblock %}
+</body>
+</html> 
