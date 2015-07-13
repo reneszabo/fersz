@@ -22,6 +22,18 @@ a:hover, a:focus{
   color: darken($fersz-color-primary,10);
   text-decoration: none;
 }
+.text-white{
+  color: #fff;
+}
+footer#footer{
+  background: darken($fersz-color-primary,10);
+  /*background: $fersz-color-primary;*/
+  border-bottom: 10px darken($fersz-color-primary,20) solid; 
+  .fersz-copyright{
+    padding-top:50px;
+    padding-bottom:30px;
+  }
+}
 
 body > header {
   .fersz-navbar-default{
