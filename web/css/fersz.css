@@ -83,5 +83,11 @@ section {
   min-height: 10px;
   padding: 40px 0; }
 
+section.header-jump {
+  padding-top: 160px;
+  padding-bottom: 80px; }
+
 .fersz-bg-gray {
   background: #ccc9cd; }
+
+/*# sourceMappingURL=fersz.css.map */

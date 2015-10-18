@@ -164,7 +164,7 @@
       </div>
       <div class="row">
 
-        
+
         <div class="col-sm-3 text-center col-sm-offset-3">
           <h2 class="text-center">
             <a href="#no-page" class="fersz-h1-pacifico fersz-subtitle fersz-font-color-primary fersz-font-shadow">Mensajeria Integral</a>
@@ -182,7 +182,7 @@
           </p>
         </div>
 
-        
+
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -198,6 +198,9 @@
     </div>
     <div class="container">
       <div class="row">
+
+
+
         <div class=" col-md-4 col-sm-6">
           <div class="fersz-thumb text-center">
             <div class="fersz-shadow">
@@ -205,21 +208,23 @@
             </div>
             <div class="fersz-subtitle-2">
               <div class="fersz-subtitle fersz-font-bold">Luis Carlos Ferrer</div>
-              Founder / CEO
+              Director / CEO
             </div>
           </div>
         </div>
+
         <div class=" col-md-4 col-sm-6">
           <div class="fersz-thumb text-center">
             <div class="fersz-shadow">
-              <img class="img-thumbnail img-circle" src="/img/rene.jpg">
+              <img class="img-thumbnail img-circle" src="/img/andres.jpg">
             </div>
             <div class="fersz-subtitle-2">
-              <div class="fersz-subtitle fersz-font-bold">Rene Ramirez</div>
-              Co-Founder / CTO
+              <div class="fersz-subtitle fersz-font-bold">Andres Nessi</div>
+              Coordinador de operaciones
             </div>
           </div>
         </div>
+
         <div class=" col-md-4 col-sm-6">
           <div class="fersz-thumb text-center">
             <div class="fersz-shadow">
@@ -227,7 +232,18 @@
             </div>
             <div class="fersz-subtitle-2">
               <div class="fersz-subtitle fersz-font-bold">Laura Salom</div>
-              Comunications Office
+              Oficina de Comunicaciones
+            </div>
+          </div>
+        </div>
+        <div class=" col-md-4 col-sm-6 col-md-offset-4">
+          <div class="fersz-thumb text-center">
+            <div class="fersz-shadow">
+              <img class="img-thumbnail img-circle" src="/img/rene.jpg">
+            </div>
+            <div class="fersz-subtitle-2">
+              <div class="fersz-subtitle fersz-font-bold">Rene Ramirez</div>
+              Co-Fundador / CTO
             </div>
           </div>
         </div>
@@ -260,22 +276,42 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-4">
-            <a href="http://ramirez-portfolio.localhost.com/app_dev.php/samples/todo-list" target="_blank" class="fersz-shadow">
+            <a href="http://ramirez-portfolio.com/samples/todo-list" target="_blank" class="fersz-shadow">
               <img src="/img/portafolio/ramirez-portfolio-001-lo.jpg" alt="ToDo List" class="img-responsive">
             </a>
           </div>
           <div class="col-md-4 col-sm-4">
-            <a href="http://ramirez-portfolio.localhost.com/app_dev.php/samples/fitrition " target="_blank" class="fersz-shadow">
+            <a href="http://ramirez-portfolio.com/samples/fitrition " target="_blank" class="fersz-shadow">
               <img src="/img/portafolio/ramirez-portfolio-002-lo.jpg" alt="Fitrition" class="img-responsive">
             </a>
           </div>
           <div class="col-md-4 col-sm-4">
-            <a href="http://ramirez-portfolio.localhost.com/app_dev.php/samples/symbiosis" target="_blank" class="fersz-shadow">
+            <a href="http://ramirez-portfolio.com/samples/symbiosis" target="_blank" class="fersz-shadow">
               <img src="/img/portafolio/ramirez-portfolio-003-lo.jpg" alt="Fitrition" class="img-responsive">
             </a>
           </div>
         </div>
-
+        <div class="text-center">
+          <h1 class="fersz-h1-pacifico fersz-title fersz-font-color-primary fersz-font-shadow">Clients</h1>
+          <p class="fersz-subtitle">Gracias por su confianza</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <a href="{{ path('frontend_image', {imageName: 'fersz-celebralandia-hi.jpg'}) }}" target="_blank" class="fersz-shadow">
+              <img src="/img/portafolio/fersz-celebralandia-lo.jpg" alt="Celebralandia" class="img-responsive">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <a href="{{ path('frontend_image', {imageName: 'fersz-studios-make-up-hi.jpg'}) }}" target="_blank" class="fersz-shadow">
+              <img src="/img/portafolio/fersz-studios-make-up-lo.jpg" alt="Studios Make Up" class="img-responsive">
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <a href="{{ path('frontend_image', {imageName: 'fersz-dandrea-hi.jpg'}) }}" target="_blank" class="fersz-shadow">
+              <img src="/img/portafolio/fersz-dandrea-lo.jpg" alt="D Andrea" class="img-responsive">
+            </a>
+          </div>
+        </div>
       </div>
   </section>
 
@@ -318,11 +354,7 @@
       </table>
     </div>
   </section>
-  <footer id="footer" class="text-center text-white">
-    <div class="fersz-copyright">
-      <p>Copyright © {{ "now"|date('Y') }} Fersz.</p>
-    </div>
-  </footer>
+  {{ include('FrontendBundle:Default:footer.html.twig') }}
 {% endblock body %}
 {% block javascripts %}
   {{ parent() }}

@@ -10,4 +10,8 @@ class DefaultController extends Controller {
     return $this->render('FrontendBundle:Page:index.html.twig', array());
   }
 
+  public function imageAction($imageName = "") {
+    return $this->render('FrontendBundle:Page:image.html.twig', array('imageName' => $imageName));
+  }
+
 }

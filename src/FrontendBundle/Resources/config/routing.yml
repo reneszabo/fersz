@@ -1,3 +1,6 @@
 frontend_homepage:
     path:     /
     defaults: { _controller: FrontendBundle:Default:index }
+frontend_image:
+    path:     /image/{imageName}
+    defaults: { _controller: FrontendBundle:Default:image }
