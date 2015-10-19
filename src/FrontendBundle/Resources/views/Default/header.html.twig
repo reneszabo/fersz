@@ -9,17 +9,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a id="logo" href="#hero" class="navbar-brand">
+        <a id="logo" href="{% if app.request.get('_route') != 'frontend_homepage' %}{{ path('frontend_homepage') }}{% endif %}#hero" class="navbar-brand">
           <img src="/img/logo.png" alt="Fersz"/>
         </a>
       </div>
       <nav id="fersz-menu" class="collapse navbar-collapse ramirez-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#team">Equipo</a></li>
-          <li><a href="#portfolio">Portafolio</a></li>
-          <li><a href="#contactus">Contactanos</a></li>
+          <li><a href="{% if app.request.get('_route') != 'frontend_homepage' %}{{ path('frontend_homepage') }}{% endif %}#home" class="active">Home</a></li>
+          <li><a href="{% if app.request.get('_route') != 'frontend_homepage' %}{{ path('frontend_homepage') }}{% endif %}#services">Servicios</a></li>
+          <li><a href="{% if app.request.get('_route') != 'frontend_homepage' %}{{ path('frontend_homepage') }}{% endif %}#team">Equipo</a></li>
+          <li><a href="{% if app.request.get('_route') != 'frontend_homepage' %}{{ path('frontend_homepage') }}{% endif %}#portfolio">Portafolio</a></li>
+          <li><a href="{% if app.request.get('_route') != 'frontend_homepage' %}{{ path('frontend_homepage') }}{% endif %}#contactus">Contactanos</a></li>
         </ul>
       </nav>
     </div>
