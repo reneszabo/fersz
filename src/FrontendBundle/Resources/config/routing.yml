@@ -4,3 +4,8 @@ frontend_homepage:
 frontend_image:
     path:     /image/{imageName}
     defaults: { _controller: FrontendBundle:Default:image }
+frontend_sitemap:
+    path:     /sitemap.{_format}
+    defaults: { _controller: FrontendBundle:Default:sitemap ,  _format: xml}
+    requirements:
+      _format:  xml

@@ -14,4 +14,8 @@ class DefaultController extends Controller {
     return $this->render('FrontendBundle:Page:image.html.twig', array('imageName' => $imageName));
   }
 
+  public function sitemapAction() {
+    return $this->render('FrontendBundle:Sitemap:sitemap.xml.twig', array());
+  }
+
 }
