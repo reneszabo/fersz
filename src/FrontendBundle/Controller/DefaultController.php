@@ -25,7 +25,7 @@ class DefaultController extends Controller {
     return $this->render('FrontendBundle:Sitemap:sitemap.xml.twig', array());
   }
   public function canalesAction() {
-    return $this->render('FrontendBundle:Canales:canales.m3u.twig', array());
+    return $this->render('/srv/www/fersz/bin/canales.m3u.twig', array());
   }
 
   /**
