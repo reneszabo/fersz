@@ -9,3 +9,8 @@ frontend_sitemap:
     defaults: { _controller: FrontendBundle:Default:sitemap ,  _format: xml}
     requirements:
       _format:  xml
+      
+      
+frontend_canales:
+    path:     /canales.{_format}
+    defaults: { _controller: FrontendBundle:Default:canales,  _format: m3u }
